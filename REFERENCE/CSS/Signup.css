@@ -1,0 +1,351 @@
+body{
+    font-family: arial;
+    margin: 0px;
+    background-color: #FFF8F1;
+}
+
+header{
+    position: sticky;
+    top: 0px;
+    height: 0px;
+}
+
+/* HEADER */
+
+@media screen and (max-width: 1279px){
+    #header-container{
+        height: 100px;
+    }
+
+    #header-left{
+        margin-top: 25px;
+    }
+
+    #header-left-content{
+        font-size: 2.5em;
+    }
+
+    #header-left-content-compress:link, .header-left-content-compress:visited{
+        font-size: 2.5em;
+    }
+    
+    #header-left-content-compress:hover{
+        font-size: 2.5em;
+    }
+
+    #header-logo-container img{
+        margin-top: -30px;
+        height: 150px;
+        width: 150px;
+    }
+
+    #header-right{
+        margin-top: 15px;
+        margin-right: 30px;
+    }
+
+    #header-right-content{
+        font-size: 2.5em;
+    }
+
+    #header-right-content-compress:link, .header-right-content-compress:visited{
+        font-size: 2.5em;
+    }
+    
+    #header-right-content-compress:hover{
+        font-size: 2.5em;
+    }
+}
+
+.header-container{
+    background-color: #F8A756;
+    height: 50px;
+}
+
+.header-left-container{
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.header-left{
+    margin-top: 12px;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+.header-left-content:link, .header-left-content:visited{
+    font-size: 1.35em;
+    color: black;
+    text-decoration: none;
+}
+
+.header-left-content:hover{
+    color: #FFF8F1;
+    font-size: 1.35em;
+}
+
+.header-logo-container{
+    text-align: center;
+    display: inline-block;
+    width: 33%;
+}
+
+.header-logo{
+    margin-top: -18px;
+    height: 80px;
+    width: 80px;
+}
+
+.header-right-container{
+    width: 33%;
+    margin-top: 12px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+
+.header-right{
+    margin-right: 20px;
+}
+
+.header-right-content:link, .header-right-content:visited{
+    color: black;
+    text-decoration: none;
+    font-size: 1.35em;
+}
+
+.header-right-content:hover{
+    color: #FFF8F1;
+    font-size: 1.35em;
+}
+
+/* FLOATING LINKS */
+
+@media screen and (max-width: 1279px){
+    #floating-links{
+        display: none;
+    }
+
+    #main{
+        margin-top: 240px;
+    }
+}
+
+.floating-links{
+    width: 40px;
+}
+
+.floating-links-facebook{
+    position: sticky;
+    top: 0px;
+    margin-top: 200px;
+    height: 40px;
+    width: 40px;
+    background-color: blue;
+}
+
+.floating-links-instagram{
+    position: sticky;
+    margin-top: -4px;
+    top: 0px;
+    height: 40px;
+    width: 40px;
+    background-color: pink;
+}
+
+.floating-links-youtube{
+    position: sticky;
+    margin-top: -4px;
+    top: 0px;
+    height: 40px;
+    width: 40px;
+    background-color: red;
+}
+
+.floating-links-twitter{
+    position: sticky;
+    margin-top: -4px;
+    top: 0px;
+    height: 40px;
+    width: 40px;
+    background-color: skyblue;
+}
+
+/* MAIN */
+
+main{
+    margin-top: 190px;
+}
+
+/* LOGIN */
+
+@media screen and (max-width: 1279px){
+    #main-login-container{
+        width: 700px;
+    }
+
+    #main-login-error{
+        font-size: 1.5em;
+    }
+
+    #main-login-form-content-container-Email{
+        margin-left: 105px;
+    }
+
+    #main-login-form-content-container-Password{
+        margin-left: 45px;
+    }
+
+    #main-login-form-content-container-Fname{
+        margin-left: 30px;
+    }
+
+    #main-login-form-content-container-Lname{
+        margin-left: 33px;
+    }
+
+    #main-login-form-content-container-Address{
+        margin-left: 70px;
+    }
+
+    #main-login-form-content{
+        font-size: 2em;
+    }
+
+    #main-login-form-input{
+        font-size: 2em;
+    }
+
+    #main-login-button-enter-container{
+        margin-left: 505px; 
+    }
+
+    #main-login-button-enter{
+        font-size: 2em;
+    }
+}
+
+.main-login-container{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-login-name-container{
+    text-align: center;
+}
+
+.main-login-name{
+    font-size: 4em;
+    margin: 0px;
+}
+
+.main-login-line-container{
+    margin-right: 60px;
+    margin-left: 60px
+}
+
+.main-login-line{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.main-login-error-container{
+    text-align: center;
+    display: none;
+}
+
+.main-login-error{
+    color: red;
+    margin-bottom: -10px;
+    margin-left: 80px;
+}
+
+.main-login-form-container{
+    margin-top: 20px;
+}
+
+.main-login-form-content-container-Email{
+    margin-left: 70px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main-login-form-content-container-Password{
+    margin-left: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main-login-form-content-container-Fname{
+    margin-left: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main-login-form-content-container-Lname{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main-login-form-content-container-Mname{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main-login-form-content-container-Address{
+    margin-left: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main-login-form-content{
+    margin: 0px;
+    margin-right: 5px;
+    font-size: 1.35em;
+}
+
+.main-login-form-input{
+    margin: 0px;
+    margin-right: 5px;
+    background-color: #F8A756;
+    border: 0px;
+    font-size: 1.35em;
+}
+
+.main-login-button-container{
+    text-align: center;
+}
+
+.main-login-button-enter-container{
+    background-color: #F8A756;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 350px;
+}
+
+.main-login-button-enter{
+    margin: 0px;
+    border: 0px;
+    padding: 5px;
+    background-color: #F8A756;
+    cursor: pointer;
+    font-size: 16px;
+    font-size: 1.35em;
+}
+
+.main-login-button-enter:hover{
+    color: #FFF8F1;
+}
+
+.main-login-button-container a:link, .main-login-button-container a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.main-login-button-container a:hover{
+    color: #FFF8F1;
+}

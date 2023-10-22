@@ -1,0 +1,462 @@
+/* Hide scrollbar for all elements */
+* {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+  }
+  
+  /* Hide scrollbar for webkit-based browsers */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+body{
+    font-family: arial;
+    margin: 0px;
+    background-color: #FFF8F1;
+}
+
+header{
+    position: sticky;
+    top: 0px;
+    height: 0px;
+}
+
+/* HEADER */
+
+.header-container{
+    background-image: linear-gradient(to right, rgb(213, 146, 37), rgb(213, 146, 37), rgb(171, 36, 36), rgb(213, 146, 37), rgb(213, 146, 37));
+    height: 50px;
+}
+
+.header-left-container{
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.header-logo-container{
+    text-align: center;
+    display: inline-block;
+    width: 33%;
+}
+
+.header-logo{
+    margin-top: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.header-right-container{
+    width: 33%;
+    margin-top: 8px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.header-right{
+    margin-right: 20px;
+}
+
+.header-right-content{
+    margin: 0px;
+    border: 0px;
+    padding: 5px;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-size: 1.35em;
+}
+
+.header-right-content:hover{
+    color: #FFF8F1;
+}
+
+/* MAIN */
+
+main{
+    margin-top: 90px;
+}
+
+/* Introduction */
+
+.main-introduction-container{
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-introduction-name-container{
+    text-align: center;
+}
+
+.main-introduction-name{
+    font-size: 4em;
+    margin: 0px;
+}
+
+/* Analytics */
+
+.main-introduction-analytics-container{
+    display: flex;
+    justify-content: center;
+    font-size: 1.35em;
+    margin: 20px 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 0 10px;
+    border: 3px solid black;
+}
+
+.main-introduction-analytics-total{
+    margin: auto 30px;
+    text-align: center;
+}
+
+.main-introduction-analytics-total-count{
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0;
+}
+
+.main-introduction-analytics-active{
+    margin: auto 30px;
+    text-align: center;
+}
+
+.main-introduction-analytics-active-count{
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0;
+}
+
+.main-introduction-analytics-finished{
+    margin:auto 30px;
+    text-align: center;
+}
+
+.main-introduction-analytics-finished-count{
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0;
+}
+
+#myChart {
+    margin: 30px 30px;
+}
+
+.main-introduction-line-container{
+    margin-right: 30px;
+    margin-left: 30px
+}
+
+.main-introduction-line{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.main-table-container{
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+}
+
+.main-table-column-name-container-category{
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.main-table-column-name-container-category p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-table-column-name-container-case-id{
+    display: inline-block;
+    margin-left: 80px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.main-table-column-name-container-case-id p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-table-column-name-container-submitted-on{
+    display: inline-block;
+    margin-left: 45px;
+}
+
+.main-table-column-name-container-submitted-on p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-table-column-name-container-submitted-by{
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.main-table-column-name-container-submitted-by p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-table-column-name-container-location{
+    display: inline-block;
+    margin-left: 120px;
+}
+
+.main-table-column-name-container-location p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-table-column-name-container-urgency{
+    display: inline-block;
+    margin-left: 300px;
+}
+
+.main-table-column-name-container-urgency p{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-table-column-name-container-urgency select{
+    width: 15px;
+    background-color: #FFF8F1;
+    border: 0px;
+}
+
+.main-table-column-name-container-status{
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.main-table-column-name-container-status p{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-table-column-name-container-status select{
+    width: 15px;
+    background-color: #FFF8F1;
+    border: 0px;
+}
+
+/* Tables */
+
+.main-table-empty{
+    color: red;
+    text-align: center;
+    font-size: 1.35em;
+    margin-top: 30px;
+}
+
+.main-table-tables-container{
+    color: black;
+    text-decoration: none;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: block;
+}
+
+.main-table-tables-element-container {
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.main-table-tables-element-container:hover{
+    background-color: #F8A756;
+    cursor: pointer;
+    display: block;
+}
+
+.main-table-column-name-category{
+    display: inline-block;
+    margin-left: 20px;
+    width: 150px;
+}
+
+.main-table-column-name-category p{
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: -5px;
+}
+
+.main-table-column-name-case-id{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-table-column-name-case-id p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-table-column-name-submitted-on{
+    display: inline-block;
+    margin-left: 70px;
+    width: 180px;
+}
+
+.main-table-column-name-submitted-on p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-table-column-name-submitted-by{
+    display: inline-block;
+    width: 250px;
+}
+
+.main-table-column-name-submitted-by p{
+    width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: -5px;
+}
+
+.main-table-column-name-location{
+    display: inline-block;
+    width: 320px;
+}
+
+.main-table-column-name-location p {
+    display: inline-block;
+    width: 320px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: -5px;
+}
+
+.main-table-column-name-urgency{
+    display: inline-block;
+    width: 220px;
+    margin-right: 60px;
+}
+
+.main-Standard-container{
+    display: flex;
+}
+
+.main-Standard-container p{
+    width: 90px;
+    background-color: #128000;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    margin: auto;
+}
+
+.main-Urgent-container{
+    display: flex;
+}
+
+.main-Urgent-container p{
+    width: 65px;
+    background-color: #C8B00C;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    margin: auto;
+}
+
+.main-Emergency-container{
+    display: flex;
+}
+
+.main-Emergency-container p{
+    width: 110px;
+    background-color: #C20000;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    margin: auto;
+}
+
+.main-table-column-name-status{
+    display: inline-block;
+}
+
+.main-table-column-name-status img{
+    margin-bottom: -3px;
+}
+
+.main-table-column-name{
+    font-size: 1.35em;
+}
+
+.main-table-img{
+    height: 20px;
+    width: 20px;
+}
+
+/* EMERGENCY NOTIFICATION */
+
+.footer-emergency-container-off {
+    display: none;
+}
+
+.footer-emergency-container {
+    position: fixed;
+    bottom: 0px;
+    background-color: black;
+    height: 70px;
+    width: 100vw;
+    text-align: center;
+}
+
+.footer-emergency-container p{
+    color: red;
+    font-size: 1.35em;
+}
+
+.notification-modal {
+    top: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(128, 128, 128, .9);
+}
+
+.notification-modal-message {
+    font-size: 1.35em;
+    position: fixed;
+    top: 50%;
+    width: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.notification-modal-message p {
+    margin: 5px 0;
+}
+
+.notification-modal-message button {
+    margin-left: 230px;
+    font-size: .75em;
+    background-color: orange;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
