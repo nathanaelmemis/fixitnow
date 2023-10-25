@@ -14,7 +14,7 @@ import { MainCaseUpdatesMessageBox } from "./Components/MainCaseUpdatesMessageBo
 const auth = getAuth()
 onAuthStateChanged(auth, (user) => {
     if(!user) {
-        window.location.href = 'index.html';
+        window.location.href = '/';
         process.exit()
     }
 });
@@ -119,7 +119,6 @@ function setCaseStatus(specificCase, status) {
 
 // go back to dashboard function
 document.getElementById("header-left-content").addEventListener("click", function goToDashboard() {
-    localStorage.removeItem('CASEID')
     window.location.href = 'dashboard.html';
 })
 
@@ -127,8 +126,7 @@ document.getElementById("header-left-content").addEventListener("click", functio
 document.getElementById("logout-button").onclick = function logout() {
     const auth = getAuth();
     signOut(auth).then(() => {
-        localStorage.clear()
-        window.location.href = 'index.html';
+        window.location.href = '/';
     }).catch(function() {
         alert('Unexpected Error Occured!');
     });

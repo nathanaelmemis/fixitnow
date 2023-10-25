@@ -325,7 +325,6 @@ document.getElementById("status-menu").addEventListener("change", (event) => {
 document.getElementById("logout-button").onclick = function logout() {
     const auth = getAuth();
     signOut(auth).then(() => {
-        localStorage.clear()
         window.location.href = '/';
     }).catch(function() {
         alert('Unexpected Error Occured!');
