@@ -359,10 +359,17 @@ main{
     padding-bottom: 10px;
     padding-left: 15px;
     padding-right: 15px;
+<<<<<<< HEAD:public/CSS/details.css
     margin: 0;
     border-radius: 10px;
     font-size: 1.35em;
     margin-left: 5px;
+=======
+    margin: 0px;
+    border-radius: 10px;
+    font-size: 1.35em;
+    margin-left: 10px;
+>>>>>>> 097574e39062c54e563f6dd3df08f47c8423c4a1:CSS/details.css
     color: white;
 }
 
