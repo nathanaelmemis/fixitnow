@@ -9,7 +9,7 @@ const auth = getAuth()
 const database = getDatabase()
 
 // login function
-document.getElementById("enter-button").addEventListener("click", function login() {
+function login() {
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
 
@@ -27,4 +27,18 @@ document.getElementById("enter-button").addEventListener("click", function login
     .catch(function() {
         alert('Invalid Credentials!');
     });
+}
+
+document.getElementById("enter-button").addEventListener("click", login)
+
+document.getElementById("email").addEventListener("keydown", function (event) {
+    if (event.key === 'Enter') {
+        document.getElementById("password").focus()
+    }
+})
+
+document.getElementById("password").addEventListener("keydown", function (event) {
+    if (event.key === 'Enter') {
+        login()
+    }
 })
