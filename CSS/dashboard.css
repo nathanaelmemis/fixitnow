@@ -12,7 +12,7 @@
 body{
     font-family: arial;
     margin: 0px;
-    background-color: #FFF8F1;
+    background-color: #f5f5f5;
 }
 
 header{
@@ -89,7 +89,8 @@ main{
 }
 
 .main-introduction-name-container{
-    text-align: center;
+    text-align: left;
+    margin-left: 35px;
 }
 
 .main-introduction-name{
@@ -99,20 +100,39 @@ main{
 
 /* Analytics */
 
-.main-introduction-analytics-container{
+.main-introduction-analytics-container {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     font-size: 1.35em;
-    margin: 20px 30px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 25px;
-    padding: 0 10px;
-    border: 3px solid black;
+    margin: 33px 30px;
+    background-color: #891309;
+    border-radius: 30px 30px 0 0;
+    padding: 49px;
 }
 
+.main-introduction-analytics-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    width: 35%; 
+}
+
+.main-introduction-analytics-container-2 .box {
+    flex: 1;
+    margin: 5px;
+}
+
+.main-introduction-analytics-container-2 .box:nth-child(3) {
+    flex-basis: 100%;
+}
+
+
 .main-introduction-analytics-total{
-    margin: auto 30px;
     text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 14px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .main-introduction-analytics-total-count{
@@ -122,8 +142,11 @@ main{
 }
 
 .main-introduction-analytics-active{
-    margin: auto 30px;
     text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 14px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .main-introduction-analytics-active-count{
@@ -133,8 +156,11 @@ main{
 }
 
 .main-introduction-analytics-finished{
-    margin:auto 30px;
     text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 14px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .main-introduction-analytics-finished-count{
@@ -144,7 +170,7 @@ main{
 }
 
 #myChart {
-    margin: 30px 30px;
+    margin-left: 40px;
 }
 
 .main-introduction-line-container{
@@ -162,11 +188,18 @@ main{
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 100px;
+    color: white;
+}
+
+.table-header {
+    background-color: #891309;
+    padding: 15px;
+    margin: 30px 30px 0;
 }
 
 .main-table-column-name-container-category{
     display: inline-block;
-    margin-left: 50px;
+    margin-left: 14px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -220,7 +253,7 @@ main{
 
 .main-table-column-name-container-urgency{
     display: inline-block;
-    margin-left: 300px;
+    margin-left: 290px;
 }
 
 .main-table-column-name-container-urgency p{
@@ -231,13 +264,13 @@ main{
 
 .main-table-column-name-container-urgency select{
     width: 15px;
-    background-color: #FFF8F1;
+    background-color: #891309;
     border: 0px;
 }
 
 .main-table-column-name-container-status{
     display: inline-block;
-    margin-left: 80px;
+    margin-left: 90px;
 }
 
 .main-table-column-name-container-status p{
@@ -248,7 +281,7 @@ main{
 
 .main-table-column-name-container-status select{
     width: 15px;
-    background-color: #FFF8F1;
+    background-color: #891309;
     border: 0px;
 }
 
@@ -275,7 +308,7 @@ main{
 }
 
 .main-table-tables-element-container:hover{
-    background-color: #F8A756;
+    background-color: #F8A756 !important;
     cursor: pointer;
     display: block;
 }
@@ -355,12 +388,13 @@ main{
 }
 
 .main-Standard-container p{
-    width: 90px;
+    width: 110px;
     background-color: #128000;
     padding: 10px;
     border-radius: 15px;
     color: white;
     margin: auto;
+    text-align: center;
 }
 
 .main-Urgent-container{
@@ -368,12 +402,13 @@ main{
 }
 
 .main-Urgent-container p{
-    width: 65px;
+    width: 110px;
     background-color: #C8B00C;
     padding: 10px;
     border-radius: 15px;
     color: white;
     margin: auto;
+    text-align: center;
 }
 
 .main-Emergency-container{
@@ -454,9 +489,17 @@ main{
 .notification-modal-message button {
     margin-left: 230px;
     font-size: .75em;
-    background-color: orange;
+    background-color: #F8A756;
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
 }
+
+.main-table-tables-container .main-table-tables-element-container:nth-child(odd) {
+    background-color: #f0f0f0; /* Alternate background color for odd rows */
+  }
+  
+  .main-table-tables-container .main-table-tables-element-container:nth-child(even) {
+    background-color: #e0e0e0; /* Alternate background color for even rows */
+  }
