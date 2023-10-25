@@ -1,105 +1,113 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>FixItNow!</title>
-        <link rel="stylesheet" type="text/css" href="../CSS/dashboard.css">
-        <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    </head>
-    <body>     
-        <!-- HEADER -->
-        <header>
-            <div class="header-container" id="header-container">
-                <div class="header-left-container">
-                </div>
-                <div class="header-logo-container" id="header-logo-container">
-                    <img class="header-logo" src="../assets/logo.png" alt="PUPkeep Logo">
-                </div>
-                <div class="header-right-container" id="header-right-container">
-                    <div class="header-right" id="header-right">
-                        <button class="header-right-content" id ="logout-button">Logout</button>
-                    </div>
-                </div>
+
+<head>
+    <title>FixItNow!</title>
+    <link rel="stylesheet" type="text/css" href="CSS/dashboard.css">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container" id="header-container">
+            <div class="header-left-container">
             </div>
-        </header>
-        <!-- MAIN -->
-        <main id="main">
-            <section class="main-introduction-container">
-                <div class="main-introduction-name-container">
-                    <p class="main-introduction-name" id="main-introduction-name">Dashboard</p>
+            <div class="header-logo-container" id="header-logo-container">
+                <img class="header-logo" src="assets/logo.png" alt="PUPkeep Logo">
+            </div>
+            <div class="header-right-container" id="header-right-container">
+                <div class="header-right" id="header-right">
+                    <button class="header-right-content" id="logout-button">Logout</button>
                 </div>
-                <!--ANALYTICS-->
-                <div class="main-introduction-analytics-container">
-                    <div class="main-introduction-analytics-total">
-                        <p class="main-introduction-analytics-total-name">Total Cases</p>
-                        <p class="main-introduction-analytics-total-count" id="main-introduction-analytics-total-count">0</p>
-                    </div>
-                    <div class="main-introduction-analytics-active">
-                        <p class="main-introduction-analytics-active-name">Active Cases</p>
-                        <p class="main-introduction-analytics-active-count" id="main-introduction-analytics-active-count">0</p>
-                    </div>
-                    <div class="main-introduction-analytics-finished">
-                        <p class="main-introduction-analytics-finished-name">Finished Cases</p>
-                        <p class="main-introduction-analytics-finished-count" id="main-introduction-analytics-finished-count">0</p>
-                    </div>
-                    <canvas id="myChart" width="800" height="250"></canvas>
-                </div>
-                <div class="main-introduction-line-container" id="main-introduction-line-container">
-                    <hr class="main-introduction-line">
-                </div>
-            </section>
-            <!-- TABLE -->
-            <section class="main-table-container">
-                <div >
-                    <div class="main-table-column-name-container-category">
-                        <p class="main-table-column-name">Category</P>
-                    </div>
-                    <div class="main-table-column-name-container-case-id">
-                        <p class="main-table-column-name">Case ID</P>
-                    </div>
-                    <div class="main-table-column-name-container-submitted-on">
-                        <p class="main-table-column-name">Submitted On</p>
-                    </div>
-                    <div class="main-table-column-name-container-submitted-by">
-                        <p class="main-table-column-name">Submitted By</p>
-                    </div>
-                    <div class="main-table-column-name-container-location">
-                        <p class="main-table-column-name">Location</p>
-                    </div>
-                    <div class="main-table-column-name-container-urgency">
-                        <p class="main-table-column-name">Urgency</p>
-                        <select class="main-table-column-name" id="urgency-menu">
-                            <option value="All">All</option>
-                            <option value="Standard">Standard</option>
-                            <option value="Urgent">Urgent</option>
-                            <option value="Emergency">Emergency</option>
-                        </select>
-                    </div>
-                    <div class="main-table-column-name-container-status">
-                        <p class="main-table-column-name">Status</p>
-                        <select class="main-table-column-name" id="status-menu">
-                            <option value="All">All</option>
-                            <option value="New">New</option>
-                            <option value="Ongoing">Ongoing</option>
-                            <option value="Finished">Finished</option>
-                        </select>
-                    </div>
-                    <div class="main-introduction-line-container" id="main-introduction-line-container">
-                        <hr class="main-introduction-line">
-                    </div>
-                </div>
-                <div class="main-table-tables-container" id="main-table-tables-container"></div>
-                <script type="module" src="../JS/dashboard.js"></script>
-            </section>
-        </main>
-        <footer class="footer-emergency-container-off" id="footer-emergency-container">
-            <p>There is an ongoing Emergency case!</p>
-        </footer>
-        <div class="notification-modal" id="notification-modal">
-            <div class="notification-modal-message">
-                <p>This webpage plays a warning sound on new emergency cases.</p>
-                <button id="notification-modal-message-button">Okay</button>
             </div>
         </div>
-    </body>
+    </header>
+    <!-- MAIN -->
+    <main id="main">
+        <section class="main-introduction-container">
+            <div class="main-introduction-name-container">
+                <p class="main-introduction-name" id="main-introduction-name">Dashboard</p>
+            </div>
+            <!--ANALYTICS-->
+            <div class="main-introduction-analytics-container">
+                <div class="main-introduction-analytics-container-2">
+                    <div class="main-introduction-analytics-total box">
+                        <p class="main-introduction-analytics-total-name">Total Cases</p>
+                        <p class="main-introduction-analytics-total-count" id="main-introduction-analytics-total-count">
+                            8</p>
+                    </div>
+                    <div class="main-introduction-analytics-active box">
+                        <p class="main-introduction-analytics-active-name">Active Cases</p>
+                        <p class="main-introduction-analytics-active-count"
+                            id="main-introduction-analytics-active-count">3</p>
+                    </div>
+                    <div class="main-introduction-analytics-finished box
+                            ">
+                        <p class="main-introduction-analytics-finished-name">Finished Cases</p>
+                        <p class="main-introduction-analytics-finished-count"
+                            id="main-introduction-analytics-finished-count">5</p>
+                    </div>
+                </div>
+                <div class="main-introduction-analytics-container-3">
+                    <canvas id="myChart" width="600" height="187"
+                        style="box-sizing: border-box;display: block;height: 327px;width: 814px;"></canvas>
+                </div>
+            </div>
+        </section>
+        <!-- TABLE -->
+        <section class="main-table-container">
+            <div class="table-header">
+                <div class="main-table-column-name-container-category">
+                    <p class="main-table-column-name">Category</p>
+                </div>
+                <div class="main-table-column-name-container-case-id">
+                    <p class="main-table-column-name">Case ID</p>
+                </div>
+                <div class="main-table-column-name-container-submitted-on">
+                    <p class="main-table-column-name">Submitted On</p>
+                </div>
+                <div class="main-table-column-name-container-submitted-by">
+                    <p class="main-table-column-name">Submitted By</p>
+                </div>
+                <div class="main-table-column-name-container-location">
+                    <p class="main-table-column-name">Location</p>
+                </div>
+                <div class="main-table-column-name-container-urgency">
+                    <p class="main-table-column-name">Urgency</p>
+                    <select class="main-table-column-name" id="urgency-menu">
+                        <option value="All">All</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Urgent">Urgent</option>
+                        <option value="Emergency">Emergency</option>
+                    </select>
+                </div>
+                <div class="main-table-column-name-container-status">
+                    <p class="main-table-column-name">Status</p>
+                    <select class="main-table-column-name" id="status-menu">
+                        <option value="All">All</option>
+                        <option value="New">New</option>
+                        <option value="Ongoing">Ongoing</option>
+                        <option value="Finished">Finished</option>
+                    </select>
+                </div>
+                <div class="main-introduction-line-container" id="main-introduction-line-container">
+                </div>
+            </div>
+            <div class="main-table-tables-container" id="main-table-tables-container"></div>
+            <script type="module" src="JS/dashboard.js"></script>
+        </section>
+    </main>
+    <footer class="footer-emergency-container-off" id="footer-emergency-container">
+        <p>There is an ongoing Emergency case!</p>
+    </footer>
+    <div class="notification-modal" id="notification-modal">
+        <div class="notification-modal-message">
+            <p>This webpage plays a warning sound on new emergency cases.</p>
+            <button id="notification-modal-message-button">Okay</button>
+        </div>
+    </div>
+</body>
+
 </html>
