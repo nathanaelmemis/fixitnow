@@ -9,15 +9,6 @@ initializeApp(firebaseConfig)
 import { MainTableIMG } from "./Components/MainTableIMG.js";
 import { MainTableTables } from "./Components/MainTableTables.js";
 
-// check if user is valid
-const auth = getAuth()
-onAuthStateChanged(auth, (user) => {
-    if(!user) {
-        window.location.href = '/';
-        process.exit()
-    }
-});
-
 // global variables
 let URGENCY_FIILTER = 'All'
 let STATUS_FILTER = 'All'
@@ -58,39 +49,48 @@ let myChart = new Chart(ctx, {
     options: options
 });
 
-// when data changes in database under path 'users', re-render the webpage
-const database = getDatabase()
-const starCountRef = ref(database, 'users')
-onValue(starCountRef, (snapshot) => {
-    const element = document.getElementById("footer-emergency-container")       
-    element.classList.remove("footer-emergency-container")
-    element.classList.add("footer-emergency-container-off")
+// check if user is valid
+const auth = getAuth()
+onAuthStateChanged(auth, (user) => {
+    if(!user) {
+        window.location.href = '/';
+        process.exit()
+    } else {
+        // when data changes in database under path 'users', re-render the webpage
+        const database = getDatabase()
+        const starCountRef = ref(database, 'users')
+        onValue(starCountRef, (snapshot) => {
+            const element = document.getElementById("footer-emergency-container")       
+            element.classList.remove("footer-emergency-container")
+            element.classList.add("footer-emergency-container-off")
 
-    // reset chart
-    myChart.destroy();
+            // reset chart
+            myChart.destroy();
 
-    // get all users
-    users = snapshot.val()
+            // get all users
+            users = snapshot.val()
 
-    // process all cases and display accordingly
-    let emergencyCaseExists = displayCases()
-    // emergency mode is activated when an emergency case exists
-    if (emergencyCaseExists) {
-        const element = document.getElementById("footer-emergency-container")
-        
-        // show webpage emergency notification
-        element.classList.remove("footer-emergency-container-off")
-        element.classList.add("footer-emergency-container")
+            // process all cases and display accordingly
+            let emergencyCaseExists = displayCases()
+            // emergency mode is activated when an emergency case exists
+            if (emergencyCaseExists) {
+                const element = document.getElementById("footer-emergency-container")
+                
+                // show webpage emergency notification
+                element.classList.remove("footer-emergency-container-off")
+                element.classList.add("footer-emergency-container")
 
-        // prompt Windows notification
-        if ("Notification" in window) {
-            Notification.requestPermission().then(function (permission) {
-                if (permission === "granted") {
-                    // Create a new notification
-                    new Notification("There is an active emergency case!")
+                // prompt Windows notification
+                if ("Notification" in window) {
+                    Notification.requestPermission().then(function (permission) {
+                        if (permission === "granted") {
+                            // Create a new notification
+                            new Notification("There is an active emergency case!")
+                        }
+                    });
                 }
-            });
-        }
+            }
+        });
     }
 });
 

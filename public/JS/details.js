@@ -10,32 +10,31 @@ import { MainCase } from "./Components/MainCase.js";
 import { MainCaseUpdates } from "./Components/MainCaseUpdates.js";
 import { MainCaseUpdatesMessageBox } from "./Components/MainCaseUpdatesMessageBox.js";
 
-// check if user is valid
-const auth = getAuth()
+// Check if the user is valid
+const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
-    if(!user) {
+    if (!user) {
         window.location.href = '/';
-        process.exit()
+    } else {
+        // Parse the query URL into an object
+        const params = new URLSearchParams(window.location.search);
+
+        // Access the parameters
+        const USERID = params.get('userID');
+        const CASEID = params.get('caseID');
+
+        if (!USERID || !CASEID) {
+            window.location.href = 'dashboard.html';
+        } else {
+            // Real-time database listener
+            const database = getDatabase();
+            const caseRef = ref(database, `users/${USERID}/cases/${CASEID}`);
+            onValue(caseRef, (snapshot) => {
+                displayUpdates(snapshot.val());
+            });
+        }
     }
 });
-
-// parse the query URL into an object
-const params = new URLSearchParams(window.location.search);
-// access the parameters
-const USERID = params.get('userID');
-const CASEID = params.get('caseID');
-
-if(!USERID || !CASEID) {
-    window.location.href = 'dashboard.html';
-    process.exit()
-}
-
-// real-time database listener
-const database = getDatabase()
-const starCountRef = ref(database, 'users/' + USERID + '/cases/' + CASEID)
-onValue(starCountRef, (snapshot) => {
-    displayUpdates(snapshot.val())
-})
 
 function displayUpdates(specificCase) {
     document.getElementById('main-case-container')
