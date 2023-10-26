@@ -10,19 +10,19 @@ import { MainCase } from "./Components/MainCase.js";
 import { MainCaseUpdates } from "./Components/MainCaseUpdates.js";
 import { MainCaseUpdatesMessageBox } from "./Components/MainCaseUpdatesMessageBox.js";
 
+// Parse the query URL into an object
+const params = new URLSearchParams(window.location.search);
+
+// Access the parameters
+const USERID = params.get('userID');
+const CASEID = params.get('caseID');
+
 // Check if the user is valid
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
     if (!user) {
         window.location.href = '/';
     } else {
-        // Parse the query URL into an object
-        const params = new URLSearchParams(window.location.search);
-
-        // Access the parameters
-        const USERID = params.get('userID');
-        const CASEID = params.get('caseID');
-
         if (!USERID || !CASEID) {
             window.location.href = 'dashboard.html';
         } else {

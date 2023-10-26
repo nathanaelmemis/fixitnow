@@ -93,7 +93,8 @@ main{
 }
 
 .main-introduction-name{
-    font-size: 4em;
+    font-weight: bold;
+    font-size: 35px;
     margin: 0px;
 }
 
