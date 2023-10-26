@@ -36,6 +36,7 @@ onAuthStateChanged(auth, (user) => {
     }
 });
 
+// display case details
 function displayUpdates(specificCase) {
     document.getElementById('main-case-container')
     .innerHTML = '' 
@@ -102,6 +103,7 @@ function displayUpdates(specificCase) {
     }
 }
 
+// change case status to another
 function setCaseStatus(specificCase, status) {
     set(ref(database, 'users/' + USERID + '/cases/' + CASEID), {
         category: specificCase['category'],
@@ -121,7 +123,7 @@ document.getElementById("header-left-content").addEventListener("click", functio
     window.location.href = 'dashboard.html';
 })
 
-//logout function
+// logout function
 document.getElementById("logout-button").onclick = function logout() {
     const auth = getAuth();
     signOut(auth).then(() => {

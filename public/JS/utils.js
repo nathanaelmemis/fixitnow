@@ -1,3 +1,4 @@
+// unix to day-month-year format
 function formatDate(unixTimestamp) {
     let date = new Date(unixTimestamp);
     let year = date.getFullYear();
@@ -6,6 +7,7 @@ function formatDate(unixTimestamp) {
     return day + '/' + month + '/' + year;
 }
 
+// gets the difference of dates in days
 function getDaysDifference(timestamp1, timestamp2) {
     // Convert timestamps to Date objects
     const date1 = new Date(timestamp1);

@@ -29,14 +29,10 @@ function login() {
     });
 }
 
+// when user clicks the enter button
 document.getElementById("enter-button").addEventListener("click", login)
 
-document.getElementById("email").addEventListener("keydown", function (event) {
-    if (event.key === 'Enter') {
-        document.getElementById("password").focus()
-    }
-})
-
+// when user presses enter key while typing password
 document.getElementById("password").addEventListener("keydown", function (event) {
     if (event.key === 'Enter') {
         login()

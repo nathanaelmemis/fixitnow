@@ -175,13 +175,16 @@ function getAnalyticsDataAndExtractAllCases(users) {
     let analytics = [0, 0, 0, 0]
     let cases = []
 
+    // iterate through every user in data
     for (const userID in users) {
         let userCases = users[userID]['cases']
 
+        // iterate through every case of each user in data
         for (const caseID in userCases) {
             userCases[caseID]['caseID'] = caseID
             userCases[caseID]['userID'] = userID
             cases.push(userCases[caseID])
+            // get case data that are within 1 month for analytics
             let daysDifference = getDaysDifference(userCases[caseID]['submitted_on'], Date.now())
             if (daysDifference <= 28) {
                 if (daysDifference < 7) {

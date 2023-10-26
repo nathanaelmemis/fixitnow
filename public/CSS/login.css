@@ -40,7 +40,7 @@ main{
 /* LOGIN */
 
 .main-login-container{
-    width: 900px;
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -50,76 +50,66 @@ main{
 }
 
 .main-login-name{
-    font-size: 4em;
+    font-weight: bold;
+    font-size: 35px;
     margin: 0px;
-}
-
-.main-login-line-container{
-    margin-right: 60px;
-    margin-left: 60px
-}
-
-.main-login-line{
-    border: 2px solid black;
-    border-radius: 10px;
 }
 
 .main-login-form-container{
     margin-top: 20px;
+    background-color: #D8D8D8;
+    padding: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+    border-radius: 5px;
 }
 
 .main-login-form-content-container-Email{
-    margin-left: 40px;
-    margin-bottom: 10px;
-    text-align: center;
+    margin-top: 20px;
 }
 
 .main-login-form-content-container-Email input{
-    border-radius: 5px;
-}
-
-.main-login-form-content-container-Password{
-    text-align: center;
+    border-radius: 35px;
+    width: 90%;
     margin-bottom: 10px;
 }
 
+.main-login-form-content-container-Password{
+    margin-bottom: 20px;
+}
+
 .main-login-form-content-container-Password input{
-    border-radius: 5px;
+    border-radius: 35px;
+    width: 90%;
 }
 
 .main-login-form-content{
     margin: 0px;
     margin-right: 5px;
-    font-size: 1.35em;
+    font-size: 1em;
 }
 
 .main-login-form-input{
-    margin: 0px;
-    margin-right: 5px;
-    background-color: #F8A756;
     border: 0px;
-    font-size: 1.35em;
+    font-size: 1em;
+    padding: 1.25em 1em;
 }
 
 .main-login-button-container{
     text-align: center;
 }
 
-.main-login-button-enter-container{
-    background-color: #F8A756;
-    cursor: pointer;
-    display: inline-block;
-    margin-left: 310px;
-    border-radius: 5px;
-}
-
 .main-login-button-enter{
-    margin: 0px;
-    padding: 5px;
+    padding: 1.25em;
     cursor: pointer;
-    font-size: 1.35em;
+    font-size: 1em;
+    background-color: #891309;
+    text-align: center;
+    border-radius: 35px;
+    color: white;
+    font-weight: bold;
 }
 
 .main-login-button-enter:hover{
-    color: #FFF8F1;
+    background-color: #ff7700;
+    cursor: pointer;
 }
