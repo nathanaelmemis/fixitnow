@@ -17,6 +17,8 @@ const params = new URLSearchParams(window.location.search);
 const USERID = params.get('userID');
 const CASEID = params.get('caseID');
 
+const database = getDatabase();
+
 // Check if the user is valid
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
@@ -27,7 +29,6 @@ onAuthStateChanged(auth, (user) => {
             window.location.href = 'dashboard.html';
         } else {
             // Real-time database listener
-            const database = getDatabase();
             const caseRef = ref(database, `users/${USERID}/cases/${CASEID}`);
             onValue(caseRef, (snapshot) => {
                 displayUpdates(snapshot.val());
