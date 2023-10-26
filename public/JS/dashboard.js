@@ -54,7 +54,6 @@ const auth = getAuth()
 onAuthStateChanged(auth, (user) => {
     if(!user) {
         window.location.href = '/';
-        process.exit()
     } else {
         // when data changes in database under path 'users', re-render the webpage
         const database = getDatabase()
