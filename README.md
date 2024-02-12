@@ -4,6 +4,16 @@
 
 Welcome to FixItNow!, a comprehensive maintenance reporting system designed to streamline the process of reporting and managing maintenance issues within your organization. This system aims to improve communication, enhance efficiency, and ensure that maintenance concerns are addressed promptly.
 
+## Website Link
+
+https://fix-it-now.netlify.app/
+
+## Demo Account
+
+Email: adminuser@gmail.com
+
+Password: adminuser
+
 ## Features
 
 ### 1. **User-Friendly Interface**
